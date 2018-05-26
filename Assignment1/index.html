@@ -1,0 +1,58 @@
+<!doctype html>
+<html >
+<head>
+    <title>
+        Module1
+    </title>
+    <style>
+        body,html{
+            font-size: 20px;
+            color: #37474F;
+            font-family:fantasy;
+        }
+        input{
+            height:30px;
+            width:200px;
+            border-radius: 10px;
+            outline: none;
+            border:1px solid #33b5e5;
+            margin: 10px;
+            text-align: center;
+            color: #37474F !important;
+            font-size: 15px;
+        }
+        input[type="submit"]{
+            background-color: #ff4444;
+            border: 0;
+            width:150px;
+            box-shadow: 10px 4px 18px -7px ;
+            color: white;
+        }
+        .error{
+            color:red;
+            border:1px solid red;
+        }
+        .fine{
+            color:green;
+            border:1px solid green;
+        }
+    </style>
+<script src="angular.js"></script>
+<script src="app.js"></script>
+</head>
+<body ng-app="myapp">
+    
+<div ng-controller="mycontroller" >
+
+    User: <input type="text" ng-class="state" ng-model="name">
+    
+    <!-- Not Counting Empty Items and Spaces -->
+    
+    <input type="submit" value="Check If Too Much" ng-click="check()">
+    <br>
+    <div ng-class="state" style="border:0px"> {{ message }}</div>
+ 
+</div>
+</body>
+    
+</html>
